@@ -1,16 +1,21 @@
+import theme from "./theme"
+import {ThemeProvider} from "styled-components"
 import store from './redux/store';
 import { Provider } from 'react-redux'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import ProductConfigurator from './product-configurator'
+import ProductConfigurator from './product-configurator.styled'
 import reportWebVitals from './reportWebVitals'
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+const root = ReactDOM.createRoot(document.getElementById('root'))
+// const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ProductConfigurator />
+      <ThemeProvider theme={theme}>
+        <ProductConfigurator />
+      </ThemeProvider>
     </Provider>
   </React.StrictMode>
 )
