@@ -1,3 +1,4 @@
+import Summary from "./summary.styled"
 import StyledButton from './button.styled'
 import { updateOptions } from './redux/actions'
 import {
@@ -22,6 +23,7 @@ const OptionSelect = ({ type, ...props }: Props.OptionSelect) => {
   const dispatch = useDispatch()
   const selectedOptions = useSelector(selectChosenOptions)
   const { value, label } = props
+  console.log('props', props);
   const isSelected = selectedOptions[type] === value
   const handleClick = () => dispatch(updateOptions({ type, value }))
   return (
@@ -45,10 +47,10 @@ const Description = () => {
   return <div className="description">{description}</div>
 }
 
-const Summary = () => {
-  const product = useSelector(selectProduct)
-  return <div>{JSON.stringify(product)}</div>
-}
+
+
+
+
 
 const Label = (props: Props.Label) => {
   const { label } = props
@@ -85,6 +87,7 @@ const Body = ({ children }: { children: ReactElement[] }) => (
 const ProductConfigurator = (props: Props.ProductConfigurator) => {
   const { className } = props
   const options = useSelector(selectOptions)
+  console.log('options', Object.values(options));
   return (
     <div id="product-configurator" className={className}>
       <Title />
@@ -92,12 +95,12 @@ const ProductConfigurator = (props: Props.ProductConfigurator) => {
         <Image />
         <div className="configurator">
           <Description />
-          {options.map((data: Data.Options) => {
+          {(Object.values(options) as Data.Options[]).map((data: Data.Options) => {
             const { label, values, type } = data
             return (
               <div className="button-group">
                 <Label label={label} />
-                {values.map((props: Data.Values) => (
+                {(Object.values(values) as Data.Values[]).map((props: Data.Values) => (
                   <OptionSelect {...props} type={type} />
                 ))}
               </div>
@@ -129,6 +132,9 @@ declare namespace Data {
 }
 
 declare namespace Props {
+  export interface Summary {
+    className?: string
+  }
   export interface OptionSelect {
     value: string
     label: string

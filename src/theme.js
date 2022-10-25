@@ -13,17 +13,25 @@ const theme = {
   option: {
     button: {
       selected: {
-        border: `1px solid hsl(164, 100%, 30%)`,
+        border: `3px solid hsl(164, 100%, 30%)`,
       },
       unselected: {
-        border: "1px solid hsl(0, 0%, 21%)",
+        border: "2px solid hsl(0, 0%, 80%)",
       },
-      padding: "20px",
+      padding: ".7rem",
       border: {
-        radius: "2rem",
+        radius: ".5rem",
       },
     },
   },
+  summary: {
+    table: {
+      border: "1px solid hsl(0, 0%, 80%)",
+      cell: {
+        padding: "1rem"
+      }
+    }
+  }
 };
 
 export default theme;

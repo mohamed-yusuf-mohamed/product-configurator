@@ -5,11 +5,19 @@ ${({theme}) => `@import url(${theme.font})`};
 font-family: 'Roboto', sans-serif;
 display: flex;
 flex-direction: column;
+width: 80%;
+padding: 2rem;
 
+& div {
+  margin-bottom: 2rem;
+}
 
 & .title {
   margin-left: 40%;
   color: ${({theme}) => theme.title.colour};
+  & h1 {
+    margin: 0;
+  }
 }
 
 & .body {
@@ -23,8 +31,15 @@ flex-direction: column;
 }
 
 & .image img {
-  width: 70%;
+  width: 90%;
 }
+
+& .button-group button {
+  margin-right: 1.5rem;
+  width: 35%;
+}
+
+
 
 & .body > div {
   // padding: 20px;
