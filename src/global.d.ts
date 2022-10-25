@@ -11,6 +11,15 @@ declare global {
   interface State {
     Product: Product
   }
+  interface Summary {
+    className?: string
+  }
+  
+  declare namespace Props {
+    export interface Summary {
+      className?: string
+    }
+  }
   interface Product {
     id: string
     title: string

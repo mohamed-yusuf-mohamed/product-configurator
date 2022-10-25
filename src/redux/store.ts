@@ -1,4 +1,18 @@
-import {createStore} from "redux"
+import {ThunkAction, AnyAction, applyMiddleware, ThunkDispatch as ThunkDispatchFn } from '@reduxjs/toolkit';
 import reducer from "./reducer"
-const store = createStore(reducer)
-export default store
+import thunk from "redux-thunk"
+import { createStore } from 'redux';
+
+export const store = createStore(reducer, applyMiddleware(thunk))
+
+export type State = ReturnType<typeof store.getState>;
+export type Dispatch = typeof store.dispatch;
+export type ThunkDispatch = ThunkDispatchFn<State, void, AnyAction>;
+export type GetState = typeof store.getState;
+export type Thunk<ReturnType = Promise<AnyAction>> = ThunkAction<
+  ReturnType,
+  State,
+  unknown,
+  AnyAction
+>;
+

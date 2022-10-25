@@ -1,31 +1,32 @@
-import Summary from "./summary.styled"
-import StyledButton from './button.styled'
-import { updateOptions } from './redux/actions'
+import Summary from "./components/summary"
+import StyledButton from './components/button'
+import { updateSelection } from './redux/actions'
 import {
   selectChosenOptions,
   selectOptions,
   selectProduct,
+  selectAttributes
 } from './redux/selectors'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from './redux/hooks'
 import { useCallback, ReactNode, ReactElement } from 'react'
 // import useSelector from "react-redux"
-import data from './data.json'
+// import data from './data.json'
 import { useState, Children, cloneElement } from 'react'
 
-// import { Title } from './components'
 
-// const StyledButton = styled(button)`
-//   border: ${({ isSelected, theme }) =>
-//     isSelected ? theme.option.selected : theme.option.unselected};
-// `
 
 const OptionSelect = ({ type, ...props }: Props.OptionSelect) => {
   const dispatch = useDispatch()
-  const selectedOptions = useSelector(selectChosenOptions)
+  const attributes = useSelector(selectAttributes) as any
+  
   const { value, label } = props
-  console.log('props', props);
-  const isSelected = selectedOptions[type] === value
-  const handleClick = () => dispatch(updateOptions({ type, value }))
+  const isSelected = (attributes as any)[type].value === value
+  // const isSelected = (attributes as State.Attribute)[type].value === value
+  // console.log('type', type);
+  // console.log('value', value);
+  // console.log('attributes', attributes);
+  const handleClick = () => dispatch(updateSelection({ ...attributes, [type]: { value, label} }))
+  // const handleClick = () => dispatch(updateOptions({ type, value }))
   return (
     <StyledButton isSelected={isSelected} onClick={handleClick} {...props}>
       {label}
@@ -87,7 +88,6 @@ const Body = ({ children }: { children: ReactElement[] }) => (
 const ProductConfigurator = (props: Props.ProductConfigurator) => {
   const { className } = props
   const options = useSelector(selectOptions)
-  console.log('options', Object.values(options));
   return (
     <div id="product-configurator" className={className}>
       <Title />
@@ -114,10 +114,18 @@ const ProductConfigurator = (props: Props.ProductConfigurator) => {
 }
 
 interface Values {
-  value: string;
-  label: string;
+  value: string
+  label: string
 }
 
+declare namespace State {
+  export interface Attribute {}
+  export interface Product {
+    attribute: {
+      [key: string]: Attribute
+    }
+  }
+}
 
 declare namespace Data {
   export interface Options {

@@ -1,19 +1,26 @@
+import {formatPrice} from "./utils"
+import {createSelector} from "reselect"
+
 export const selectOptions = (state) => state.options
 
 export const selectChosenOptions = (state) => state.chosenOptions
 
-// export const selectProduct = (state): State.Product => {
 export const selectProduct = (state) => {
-  const { chosenOptions, products } = state
-
-  const hasOptions = (product) => {
-    for (const type in chosenOptions) {
-      if (product[type] !== chosenOptions[type]) return false
-    }
-    return true
-  }
-  for (const id in products) {
-    if (!hasOptions(products[id])) continue
-    return products[id]
-  }
+  return state.selected
 }
+
+export const selectSummary = createSelector(selectProduct, (product) => {
+  const {attributes, price} = product
+  return {
+    ...attributes,
+    price: formatPrice(price)
+  }
+})
+
+export const selectAttributes = createSelector(selectProduct, (product) => {
+  return Object.values(product.attributes).filter((attribute) => attribute.selectable === true).reduce((prev, attribute) => ({
+    ...prev,
+    [attribute.type]: attribute
+  }), {})
+})
+

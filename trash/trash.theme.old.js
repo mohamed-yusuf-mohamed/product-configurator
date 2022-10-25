@@ -1,4 +1,4 @@
-import { parseHSL } from './utils'
+import { parseHSL } from './app/utils'
 // Colours are defined in HSL format. https://css-tricks.com/yay-for-hsla
 
 const make = function() {
