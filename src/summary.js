@@ -1,7 +1,9 @@
+import {formatPrice} from "./utils"
 import { selectOptions } from "./redux/selectors"
 import { selectProduct } from "./redux/selectors"
 import { useSelector } from "react-redux"
-const Summary = ({ className }: Props.Summary) => {
+const Summary = ({ className }) => {
+// const Summary = ({ className }: Props.Summary) => {
   const {
     "page-count": pages,
     "cover-colour": colourValue,
@@ -32,7 +34,7 @@ const Summary = ({ className }: Props.Summary) => {
         </tr>
         <tr>
           <td>Price</td>
-          <td>{price}</td>
+          <td>{formatPrice(price)}</td>
         </tr>
       </table>
     </div>

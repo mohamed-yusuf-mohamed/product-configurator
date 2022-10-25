@@ -2,7 +2,7 @@
 	"products": [
 		{
 			"id": "1",
-			"product-label": "Hardcover Notebook",
+			"product-label": "MOO Hardcover Notebook",
 			"product-id": "hardcover-notebook",
 			"attributes": [
 				{
@@ -31,7 +31,7 @@
 		},
 		{
 			"id": "2",
-			"product-label": "Hardcover Notebook",
+			"product-label": "MOO Hardcover Notebook",
 			"product-id": "hardcover-notebook",
 			"attributes": [
 				{
@@ -60,7 +60,7 @@
 		},
 		{
 			"id": "3",
-			"product-label": "Hardcover Notebook",
+			"product-label": "MOO Hardcover Notebook",
 			"product-id": "hardcover-notebook",
 			"attributes": [
 				{
@@ -89,7 +89,7 @@
 		},
 		{
 			"id": "4",
-			"product-label": "Hardcover Notebook",
+			"product-label": "MOO Hardcover Notebook",
 			"product-id": "hardcover-notebook",
 			"attributes": [
 				{

@@ -16,7 +16,10 @@ padding: 2rem;
   margin-left: 40%;
   color: ${({theme}) => theme.title.colour};
   & h1 {
-    margin: 0;
+    all: unset;
+    font-weight: regular;
+    font-size: 1.7rem;
+    // margin: 0;
   }
 }
 

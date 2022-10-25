@@ -2,7 +2,8 @@ export const selectOptions = (state) => state.options
 
 export const selectChosenOptions = (state) => state.chosenOptions
 
-export const selectProduct = (state): State.Product => {
+// export const selectProduct = (state): State.Product => {
+export const selectProduct = (state) => {
   const { chosenOptions, products } = state
 
   const hasOptions = (product) => {

@@ -25,7 +25,7 @@ const initialState = {
   products: {
     1: {
       id: "1",
-      title: "Hardcover Notebook",
+      title: "MOO Hardcover Notebook",
       description: ipsum,
       image: "./moo-product-image.jpeg",
       "cover-colour": "blue",
@@ -35,7 +35,7 @@ const initialState = {
     },
     2: {
       id: "2",
-      title: "Hardcover Notebook",
+      title: "MOO Hardcover Notebook",
       description: ipsum,
       image: "./moo-product-image.jpeg",
       "cover-colour": "blue",
@@ -45,7 +45,7 @@ const initialState = {
     },
     3: {
       id: "3",
-      title: "Hardcover Notebook",
+      title: "MOO Hardcover Notebook",
       description: ipsum,
       image: "./moo-product-image.jpeg",
       "cover-colour": "red",
@@ -55,7 +55,7 @@ const initialState = {
     },
     4: {
       id: "4",
-      title: "Hardcover Notebook",
+      title: "MOO Hardcover Notebook",
       description: ipsum,
       image: "./moo-product-image.jpeg",
       "cover-colour": "red",
