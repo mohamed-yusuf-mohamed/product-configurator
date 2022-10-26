@@ -1,4 +1,8 @@
 Feature: product-configurator
+  # Scenario: Visual Regression
+  #   Given I visit the product configurator page
+  #   Then I see that the page
+
   Scenario: Selecting Options
     Given I visit the product configurator page
     And that "Sunset" is "selected"

@@ -3,11 +3,9 @@ import {createSelector} from "reselect"
 
 export const selectOptions = (state) => state.options
 
-export const selectChosenOptions = (state) => state.chosenOptions
+// export const selectChosenOptions = (state) => state.chosenOptions
 
-export const selectProduct = (state) => {
-  return state.selected
-}
+export const selectProduct = (state) => state.selected
 
 export const selectSummary = createSelector(selectProduct, (product) => {
   const {attributes, price} = product
@@ -18,6 +16,7 @@ export const selectSummary = createSelector(selectProduct, (product) => {
 })
 
 export const selectAttributes = createSelector(selectProduct, (product) => {
+  console.log('product', product);
   return Object.values(product.attributes).filter((attribute) => attribute.selectable === true).reduce((prev, attribute) => ({
     ...prev,
     [attribute.type]: attribute

@@ -23,6 +23,13 @@ import ProductConfigurator from "./app.connected"
 function mapStateToProps(state, ownProps) {
   // const attributes = selectAttributes(state)
   // const selectedOption = attributes[type].value
+  // selectOptions(state)
+  // console.log('selectOptions(state)', selectOptions(state));
+  // selectAttributes(state)
+  // console.log('selectAttributes(state)', selectAttributes(state));
+  // console.log('selectAttributes', selectAttributes);
+  // selectSummary(state)
+  // console.log('selectSummary(state)', selectSummary(state));
   return {
     ...ownProps,
     image: selectImage(state),

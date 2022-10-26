@@ -1,0 +1,16 @@
+{
+  "cover-colour": {
+      "id": "cc1",
+      "type": "cover-colour",
+      "value": "red",
+      "label": "Sunset",
+      "selectable": true
+  },
+  "paper-type": {
+      "id": "pt1",
+      "type": "paper-type",
+      "value": "dotted",
+      "label": "Dotted",
+      "selectable": true
+  }
+}

@@ -21,6 +21,7 @@ const StyledButton = styled.button<ButtonProps>`
 const OptionSelect = ({ type, ...props }: Props.OptionSelect) => {
   const dispatch = useDispatch()
   const { value, label, attributes } = props
+  console.log('attributes', attributes);
   const isSelected = attributes[type].value === value
   const handleOptionSelect = useCallback(
     () =>
@@ -29,6 +30,7 @@ const OptionSelect = ({ type, ...props }: Props.OptionSelect) => {
   )
   return (
     <StyledButton
+      data-testid="option-select"
       isSelected={isSelected}
       onClick={handleOptionSelect}
       {...props}

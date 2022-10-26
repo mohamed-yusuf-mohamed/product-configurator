@@ -1,23 +1,24 @@
+import lorem from "./lorem.json"
 import headings from "./headings"
-import { LoremIpsum } from "lorem-ipsum"
-// const LoremIpsum = require("lorem-ipsum").LoremIpsum;
+// import { LoremIpsum } from "lorem-ipsum"
+// // const LoremIpsum = require("lorem-ipsum").LoremIpsum;
 
-const lorem = new LoremIpsum({
-  sentencesPerParagraph: {
-    max: 10,
-    min: 6,
-  },
-  wordsPerSentence: {
-    max: 16,
-    min: 4,
-  },
-})
+// const lorem = new LoremIpsum({
+//   sentencesPerParagraph: {
+//     max: 10,
+//     min: 6,
+//   },
+//   wordsPerSentence: {
+//     max: 16,
+//     min: 4,
+//   },
+// })
 
 // lorem.generateWords(1);
 // lorem.generateSentences(5);
 // lorem.generateParagraphs(7);
 
-const ipsum = lorem.generateParagraphs(1)
+const ipsum = lorem
 
 export const generateProducts = (data) => {
   return data.products.reduce(

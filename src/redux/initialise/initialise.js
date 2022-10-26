@@ -14,6 +14,7 @@ const initialise = async () => {
     selected: defaultSelection
   }))
   
+  console.log('store', store.getState());
   return store
 }
 export default initialise
