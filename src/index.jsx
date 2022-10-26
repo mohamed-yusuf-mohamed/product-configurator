@@ -6,7 +6,7 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 // import './index.css'
 import initialiseData from "./redux/initialise"
-import ProductConfigurator from "./app.styled"
+import ProductConfigurator from "./app.connect"
 
 // const root = ReactDOM.createRoot(document.getElementById("root"))
 initialiseData().then((store) =>

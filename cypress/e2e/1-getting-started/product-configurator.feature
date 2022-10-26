@@ -1,5 +1,13 @@
 Feature: product-configurator
   Scenario: Selecting Options
+    Given I visit the product configurator page
+    And that "Sunset" is selected
+    When I click "Ocean"
+    Then I see that "Ocean" is selected
+
+    And that "Dotted" is selected
+    When I click "Lined"
+    Then I see that "Lined" is selected
 
   Scenario: Summary Updates
     Given I visit the product configurator page
@@ -9,7 +17,6 @@ Feature: product-configurator
     | Layout  | Dotted  |
     | Price   | £17.00  |
 
-    # When I click something
     When I click "Ocean"
     Then I should see the below summary
     | Pages   | 170     |

@@ -5,7 +5,7 @@ import { LoremIpsum } from "lorem-ipsum"
 const lorem = new LoremIpsum({
   sentencesPerParagraph: {
     max: 10,
-    min: 5,
+    min: 6,
   },
   wordsPerSentence: {
     max: 16,

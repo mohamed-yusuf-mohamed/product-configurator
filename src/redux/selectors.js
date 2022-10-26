@@ -24,3 +24,6 @@ export const selectAttributes = createSelector(selectProduct, (product) => {
   }), {})
 })
 
+export const selectDescription = createSelector(selectProduct, product => product.description)
+export const selectTitle = createSelector(selectProduct, product => product.title)
+export const selectImage = createSelector(selectProduct, product => product.image)
