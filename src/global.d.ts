@@ -16,8 +16,46 @@ declare global {
   }
   
   declare namespace Props {
-    export interface Summary {
+    export interface Image {
+      image: string
+    }
+  
+    export interface Description {
+      description: string
+    }
+  
+    export interface Title {
+      title: string
+    }
+    // export interface Summary {
+    //   className?: string
+    // }
+    export interface OptionSelect {
+      value: string
+      label: string
+      type: keyof AttributeOptions
+      attributes: Attributes
+    }
+    export interface Label {
+      label: string
+    }
+    export interface ProductConfigurator {
       className?: string
+      options: Options
+      image: string
+      title: string
+      description: string
+      attributes: Attributes
+      summary: Summary
+    }
+
+    export type Summary = {
+      className?: string
+      'cover-colour': AttributeItem
+      'paper-type': AttributeItem
+      'page-count': AttributeItem
+      price: number
+
     }
   }
   interface Product {
@@ -28,6 +66,47 @@ declare global {
     "cover-colour": string
     "paper-type": string
     "page-count": number
+  }
+
+  type Options = {
+    [Property in keyof Attributes]: {
+      type: Property
+      label: string
+      values: OptionItem[]
+    }
+  }
+  
+  interface OptionItem {
+    value: string
+    label: string
+  }
+  
+  declare namespace State {
+    export interface Attribute {}
+    export interface Product {
+      attribute: {
+        [key: string]: Attribute
+      }
+    }
+  }
+  
+  
+  
+  interface AttributeItem {
+    id: string
+    label: string
+    selectable: boolean
+    type: string
+    value: string
+  }
+  
+  interface AttributeOptions {
+    "cover-colour": AttributeItem
+    "paper-type": AttributeItem
+  }
+  
+  type Attributes = {
+    [Property in keyof AttributeOptions]: AttributeItem
   }
 }
 export {}

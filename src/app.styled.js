@@ -1,4 +1,4 @@
-import ProductConfigurator from "./app"
+import ProductConfigurator from "./app.connect"
 import styled from "styled-components"
 const StyledProductConfigurator = styled(ProductConfigurator)`
   ${({ theme }) => `@import url(${theme.font})`};

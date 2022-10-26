@@ -1,10 +1,11 @@
-import {updateSelection} from "./redux/actions"
+// import {updateSelection} from "./redux/actions"
 import {
   selectAttributes,
   selectImage,
   selectTitle,
   selectOptions,
   selectDescription,
+  selectSummary
 } from "./redux/selectors"
 import { connect } from "react-redux"
 import ProductConfigurator from "./app.connected"
@@ -29,6 +30,7 @@ function mapStateToProps(state, ownProps) {
     description: selectDescription(state),
     options: selectOptions(state),
     attributes: selectAttributes(state),
+    summary: selectSummary(state)
     // selectedOption
   }
 }

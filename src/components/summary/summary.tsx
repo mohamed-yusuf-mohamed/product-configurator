@@ -1,21 +1,11 @@
-import { selectOptions, selectSummary } from "../../redux/selectors"
-import { selectProduct } from "../../redux/selectors"
-import { useSelector } from "react-redux"
+// import { selectOptions, selectSummary } from "../../redux/selectors"
+// import { selectProduct } from "../../redux/selectors"
+// import { useSelector } from "react-redux"
 const Summary = (props: Props.Summary) => {
-  const {className} = props
-// const Summary = ({ className }: Props.Summary) => {
-  const {'page-count': pages, 'cover-colour': colour, 'paper-type': layout, price} = useSelector(selectSummary)
-  // const {pages, colour, layout, price} = useSelector(selectSummary)
-  // const summary = useSelector(summary)
-  // const {
-  //   "page-count": pages,
-  //   "cover-colour": colourValue,
-  //   "paper-type": layoutValue,
-  //   price,
-  // } = useSelector(selectProduct)
-  // const options = useSelector(selectOptions)
-  // const colour = options["cover-colour"].values[colourValue].label
-  // const layout = options["paper-type"].values[layoutValue].label
+  console.log('props', props);
+  // const {className} = props
+  const {className, 'page-count': pages, 'cover-colour': colour, 'paper-type': layout, price} = props
+  // const {'page-count': pages, 'cover-colour': colour, 'paper-type': layout, price} = useSelector(selectSummary)
   return (
     <div className={className} data-testid="product-summary">
       <table>
@@ -23,9 +13,6 @@ const Summary = (props: Props.Summary) => {
           <th>Summary</th>
           <th className="hide">Values</th> {/* to fix cls */}
         </tr>
-        {/* {Object.values(summary).map((item) => (
-          
-        ))} */}
         <tr>
           <td>Pages</td>
           <td>{pages.value}</td>
