@@ -86,7 +86,8 @@ const Body = ({ children }: { children: ReactElement[] }) => (
 )
 
 const ProductConfigurator = (props: Props.ProductConfigurator) => {
-  console.log('props.options', props.options);
+  // console.log('props.options', props.options);
+  // const {options} = props
   const { className } = props
   const options = useSelector(selectOptions)
   return (

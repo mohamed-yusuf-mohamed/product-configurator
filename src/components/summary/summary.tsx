@@ -17,7 +17,7 @@ const Summary = (props: Props.Summary) => {
   // const colour = options["cover-colour"].values[colourValue].label
   // const layout = options["paper-type"].values[layoutValue].label
   return (
-    <div className={className}>
+    <div className={className} data-testid="product-summary">
       <table>
         <tr>
           <th>Summary</th>

@@ -1,42 +1,19 @@
-import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
+const { Given, When, Then } =  require("@badeball/cypress-cucumber-preprocessor")
 
-When("I visit the product configurator page", () => {
+Given("I visit the product configurator page", () => {
   cy.visit("http://localhost:3000")
 })
 
-// Then("I should see the default product selected", () => {
-
-// })
-
-When("I click Sunset", () => {
-
+When("I click something", () => {
+  
 })
 
-Then("I should see product ${id} in the summary", () => {
-
+When("I click {string}", (option) => {
+  cy.contains(option).click()
 })
 
-When("I click Lined", () => {
-
+Then("I should see the below summary", (table) => {
+  const summaryItem = table.rowsHash()
+  Object.values(summaryItem).forEach((value) => cy.get("[data-testid='product-summary']").contains(value))
 })
 
-When("I click Ocean", () => {
-
-})
-
-
-// import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
-
-// When("I visit duckduckgo.com", () => {
-//   cy.visit("https://duckduckgo.com/");
-// });
-
-// Then("I should see a search bar", () => {
-//   cy.get("input").should(
-//     "have.attr",
-//     "placeholder",
-//     "Search the web without being tracked"
-//   );
-
-//   assert.deepEqual({}, {});
-// });
