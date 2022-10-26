@@ -17,12 +17,12 @@ import {
   Label,
   Image,
   Summary
-} from "./components"
+} from "../components"
 
 const ProductConfigurator = (props: Props.ProductConfigurator) => {
   const { image, title, description, options, className, attributes, summary} = props
   return (
-    <div id="product-configurator" className={className}>
+    <div data-testid="product-configurator" className={className}>
       <Title title={title} />
       <div className="body">
         <Image image={image} />

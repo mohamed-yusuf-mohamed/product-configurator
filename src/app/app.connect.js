@@ -6,9 +6,9 @@ import {
   selectOptions,
   selectDescription,
   selectSummary
-} from "./redux/selectors"
+} from "../redux/selectors"
 import { connect } from "react-redux"
-import ProductConfigurator from "./app.connected"
+import ProductConfigurator from "./app.styled"
 
 // TodoList.js
 

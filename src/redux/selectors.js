@@ -16,7 +16,6 @@ export const selectSummary = createSelector(selectProduct, (product) => {
 })
 
 export const selectAttributes = createSelector(selectProduct, (product) => {
-  console.log('product', product);
   return Object.values(product.attributes).filter((attribute) => attribute.selectable === true).reduce((prev, attribute) => ({
     ...prev,
     [attribute.type]: attribute

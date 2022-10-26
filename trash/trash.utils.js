@@ -1,4 +1,4 @@
-import headings from "../redux/initialise/headings"
+import headings from "../src/redux/initialise/headings"
 import { LoremIpsum } from "lorem-ipsum"
 // const LoremIpsum = require("lorem-ipsum").LoremIpsum;
 
