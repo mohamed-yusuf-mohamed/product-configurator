@@ -20,8 +20,7 @@
     "eject": "react-scripts eject",
     "build-tests": "cypress-cucumber-preprocessor tsc",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "test:e2e": "BROWSER=none npm run start && cypress run"
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [

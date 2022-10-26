@@ -1,22 +1,4 @@
-import {ReactElement} from "react"
-
 declare global {
-  // interface Theme {
-  //   Colour: {
-  //     HSL: {
-  //       hue: number
-  //       sat: number
-  //       light: number
-  //     }
-  //   }
-  // }
-  // interface State {
-  //   Product: Product
-  // }
-  // interface Summary {
-  //   className?: string
-  // }
-  
   declare namespace Props {
     export interface Button {
       isSelected: boolean
@@ -64,16 +46,6 @@ declare global {
     }
   }
   
-  // interface Product {
-  //   id: string
-  //   title: string
-  //   description: string
-  //   image: string
-  //   "cover-colour": string
-  //   "paper-type": string
-  //   "page-count": number
-  // }
-
   type Options = {
     [Property in keyof Attributes]: {
       type: Property
@@ -86,17 +58,6 @@ declare global {
     value: string
     label: string
   }
-  
-  // declare namespace State {
-  //   export interface Attribute {}
-  //   export interface Product {
-  //     attribute: {
-  //       [key: string]: Attribute
-  //     }
-  //   }
-  // }
-  
-  
   
   interface AttributeItem {
     id: string
