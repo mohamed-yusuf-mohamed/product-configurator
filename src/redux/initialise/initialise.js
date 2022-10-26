@@ -1,4 +1,4 @@
-import {initialiseData} from "../actions"
+import {initialiseState} from "../actions"
 import {store} from "../store"
 import api from "../../api"
 import {generateProducts, generateOptions} from "./generators"
@@ -8,13 +8,12 @@ const initialise = async () => {
   const options = generateOptions(data)
   const defaultSelection = products[1]
 
-  store.dispatch(initialiseData({
+  store.dispatch(initialiseState({
     products,
     options,
     selected: defaultSelection
   }))
   
-  console.log('store', store.getState());
   return store
 }
 export default initialise

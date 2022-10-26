@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button component renders: selected 1`] = `
+<button
+  class="sc-bcXHqe fRBfvX"
+  data-testid="option-button-selected"
+  type="cover-colour"
+/>
+`;
+
+exports[`button component renders: unselected 1`] = `
+<button
+  class="sc-bcXHqe dUuebz"
+  data-testid="option-button-unselected"
+  type="cover-colour"
+/>
+`;

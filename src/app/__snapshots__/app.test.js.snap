@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app renders: matches snapshot 1`] = `
+<div
+  class="sc-dkrFOg hxKPMK"
+  data-testid="product-configurator"
+>
+  <div
+    class="title"
+  >
+    <h1>
+      MOO Hardcover Notebook
+    </h1>
+  </div>
+  <div
+    class="body"
+  >
+    <div
+      class="image"
+    >
+      <img
+        src="./moo-product-image.jpeg"
+      />
+    </div>
+    <div
+      class="configurator"
+    >
+      <div
+        class="description"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis justo eget augue mattis volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin lectus diam, lobortis ut commodo in, accumsan non orci. Quisque ut tortor ut ligula volutpat imperdiet a eu mauris. Nulla ullamcorper nunc est, vitae ornare tellus pulvinar efficitur. Fusce justo neque, dapibus in gravida nec, eleifend sed velit. Integer vehicula sodales felis, lacinia pretium nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vitae malesuada nibh.
+      </div>
+      <div
+        class="button-group"
+        data-testid="cover-colour-options"
+      >
+        <p>
+          Choose your colour
+        </p>
+        <button
+          class="sc-gswNZR iwUBsT"
+          data-testid="option-button"
+        >
+          Sunset
+        </button>
+        <button
+          class="sc-gswNZR KNFML"
+          data-testid="option-button"
+        >
+          Ocean
+        </button>
+      </div>
+      <div
+        class="button-group"
+        data-testid="paper-type-options"
+      >
+        <p>
+          Choose your page layout
+        </p>
+        <button
+          class="sc-gswNZR iwUBsT"
+          data-testid="option-button"
+        >
+          Dotted
+        </button>
+        <button
+          class="sc-gswNZR KNFML"
+          data-testid="option-button"
+        >
+          Lined
+        </button>
+      </div>
+      <div
+        class="sc-bcXHqe iPrJEm"
+        data-testid="product-summary"
+      >
+        <table>
+          <tbody>
+            <tr>
+              <th>
+                Summary
+              </th>
+              <th
+                class="hide"
+              >
+                Values
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Pages
+              </td>
+              <td>
+                170
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Colour
+              </td>
+              <td>
+                Sunset
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Layout
+              </td>
+              <td>
+                Dotted
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Price
+              </td>
+              <td>
+                £17.00
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+`;

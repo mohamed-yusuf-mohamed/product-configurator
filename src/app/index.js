@@ -4,6 +4,7 @@ import { Provider } from "react-redux"
 import React from "react"
 // import ReactDOM from "react-dom/client"
 // import initialiseData from "../redux/initialise"
+// import {store} from "../redux/store" 
 import ProductConfigurator from "./app.connect"
 
 // initialiseData().then((store) =>

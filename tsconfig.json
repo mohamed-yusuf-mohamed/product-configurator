@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-, "trash/redux.reference", "trash/trash.utils.js", "trash/trash.theme.utils.js"  ]
+, "trash/redux.reference", "trash/trash.utils.js", "trash/trash.theme.utils.js", "trash/trash.index.test.js", "trash.option-select.duff.js"  ]
 }

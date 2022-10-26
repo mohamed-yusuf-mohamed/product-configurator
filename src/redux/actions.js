@@ -1,7 +1,3 @@
-import { Dispatch, GetState, Thunk } from "./store"
-import { AnyAction } from "@reduxjs/toolkit"
-import { ThunkDispatch } from "./store"
-
 export const updateSelection =
   (options): Thunk =>
   (dispatch, getState) => {
@@ -21,7 +17,6 @@ export const updateSelection =
         if (!hasOptions(products[id])) continue
         return products[id]
       }
-
     }
 
     const product = select()
@@ -32,8 +27,7 @@ export const updateSelection =
     })
   }
 
-export const initialiseData = (initialState) => ({
+export const initialiseState = (initialState) => ({
   type: "INITIALISE",
-  payload: initialState
+  payload: initialState,
 })
-

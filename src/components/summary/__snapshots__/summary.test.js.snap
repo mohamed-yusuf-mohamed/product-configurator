@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`summary component renders 1`] = `
+<div
+  class="sc-bcXHqe iPrJEm sc-bcXHqe iPrJEm"
+  data-testid="product-summary"
+>
+  <table>
+    <tbody>
+      <tr>
+        <th>
+          Summary
+        </th>
+        <th
+          class="hide"
+        >
+          Values
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Pages
+        </td>
+        <td>
+          170
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Colour
+        </td>
+        <td>
+          Sunset
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Layout
+        </td>
+        <td>
+          Dotted
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Price
+        </td>
+        <td>
+          £17.00
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

@@ -1,20 +1,4 @@
 Feature: product-configurator
-  # Scenario: Visual Regression
-  #   Given I visit the product configurator page
-  #   Then I see that the page
-
-  Scenario: Selecting Options
-    Given I visit the product configurator page
-    And that "Sunset" is "selected"
-    When I click "Ocean"
-    Then I see that "Ocean" is "selected"
-    And that "Sunset" is "unselected"
-
-    And that "Dotted" is "selected"
-    When I click "Lined"
-    Then I see that "Lined" is "selected"
-    And that "Dotted" is "unselected"
-
   Scenario: Summary Updates
     Given I visit the product configurator page
     Then I should see the below summary

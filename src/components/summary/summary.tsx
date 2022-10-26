@@ -1,34 +1,37 @@
-// import { selectOptions, selectSummary } from "../../redux/selectors"
-// import { selectProduct } from "../../redux/selectors"
-// import { useSelector } from "react-redux"
 const Summary = (props: Props.Summary) => {
-  console.log('props', props);
-  // const {className} = props
-  const {className, 'page-count': pages, 'cover-colour': colour, 'paper-type': layout, price} = props
-  // const {'page-count': pages, 'cover-colour': colour, 'paper-type': layout, price} = useSelector(selectSummary)
+  const {
+    className,
+    "page-count": pages,
+    "cover-colour": colour,
+    "paper-type": layout,
+    price,
+  } = props
+  // <th className="hide">Values</th> is placed in the document and hidden to fix a cls issue
   return (
     <div className={className} data-testid="product-summary">
       <table>
-        <tr>
-          <th>Summary</th>
-          <th className="hide">Values</th> {/* to fix cls */}
-        </tr>
-        <tr>
-          <td>Pages</td>
-          <td>{pages.value}</td>
-        </tr>
-        <tr>
-          <td>Colour</td>
-          <td>{colour.label}</td>
-        </tr>
-        <tr>
-          <td>Layout</td>
-          <td>{layout.label}</td>
-        </tr>
-        <tr>
-          <td>Price</td>
-          <td>{price}</td>
-        </tr>
+        <tbody>
+          <tr>
+            <th>Summary</th>
+            <th className="hide">Values</th>
+          </tr>
+          <tr>
+            <td>Pages</td>
+            <td>{pages.value}</td>
+          </tr>
+          <tr>
+            <td>Colour</td>
+            <td>{colour.label}</td>
+          </tr>
+          <tr>
+            <td>Layout</td>
+            <td>{layout.label}</td>
+          </tr>
+          <tr>
+            <td>Price</td>
+            <td>{price}</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   )

@@ -28,13 +28,14 @@ const ProductConfigurator = (props: Props.ProductConfigurator) => {
         <Image image={image} />
         <div className="configurator">
           <Description description={description} />
-          {Object.values(options).map((data) => {
+          {Object.values(options).map((data, i) => {
             const { label, values, type } = data
             return (
-              <div className="button-group">
+              <div key={i} className="button-group" data-testid={`${type}-options`}>
                 <Label label={label} />
                 {Object.values(values).map((props) => (
                   <OptionSelect
+                    key={props.value}
                     {...props}
                     attributes={attributes}
                     type={type}

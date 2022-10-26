@@ -3,11 +3,12 @@
 // import { Provider } from "react-redux"
 // import React from "react"
 import ReactDOM from "react-dom/client"
-import initialiseData from "./redux/initialise"
+import initialiseState from "./redux/initialise"
 import App from "./app"
 
-initialiseData().then((store) =>
+initialiseState().then((store) =>
   ReactDOM.createRoot(document.getElementById("root")).render(
+    // <App />
     <App store={store} />
   )
 )

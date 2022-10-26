@@ -1,8 +1,6 @@
 import Summary from "./summary"
 import styled from "styled-components"
 const StyledSummary = styled(Summary)`
-  // text-transform: capitalize;
-
   font-family: sans-serif;
 
   & .hide {
@@ -25,7 +23,6 @@ const StyledSummary = styled(Summary)`
   }
 
   tr {
-    
     border-bottom: ${({ theme }) => theme.summary.table.border};
   }
 

@@ -1,42 +1,19 @@
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import theme from "../../theme"
+import { ThemeProvider } from "styled-components"
+import React from "react"
+import { render } from "@testing-library/react"
 import Summary from "./index"
 import props from "./mocks/props.json"
-// import {fetchData} from "redux/actions";
-import { Provider } from 'react-redux';
-// import { store } from 'redux/store';
-// import userEvent from '@testing-library/user-event'
-
-// jest.mock("redux/actions", () => ({
-//   ...jest.requireActual("../../redux/actions"),
-//   fetchData: jest.fn(() => ({type: ""}))
-// }))
 
 describe("summary component", () => {
-  
-  const {getByTestId} = render(
-    // <Provider store={store}>
-        <Summary {...props} />
-    // </Provider>
-  );
-  // const input = document.querySelector("[data-testid=search-component] input")
-  const component = getByTestId("search-component")
+  const { getByTestId } = render(
+    <ThemeProvider theme={theme}>
+      <Summary {...props} />
+    </ThemeProvider>
+  )
+  const component = getByTestId("product-summary")
 
-  // it("on pressing enter", () => {
-  //   // only works when the first test, time-constrained to resolve
-  //   input.focus()
-  //   userEvent.keyboard("{Enter}")
-  //   expect(fetchData).toHaveBeenCalled()
-  //   input.blur()
-  // })
-
-  it('renders', () => {
+  it("renders", () => {
     expect(component).toMatchSnapshot()
-  });
-
-  // it("on input change", () => {
-  //   const e = {target: { value: "apples oranges" }}
-  //   fireEvent.change(input, e)
-  //   expect(input.value).toBe("apples oranges")
-  // })
+  })
 })
