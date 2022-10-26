@@ -6,7 +6,7 @@ const Summary = (props: Props.Summary) => {
     "paper-type": layout,
     price,
   } = props
-  // <th className="hide">Values</th> is placed in the document and hidden to fix a cls issue
+  // n.b. <th className="hide">Values</th> is placed in the document and hidden to fix a cls issue
   return (
     <div className={className} data-testid="product-summary">
       <table>

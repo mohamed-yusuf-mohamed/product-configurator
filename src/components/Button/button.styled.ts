@@ -1,5 +1,4 @@
 import styled from "styled-components"
-// import Button from "./button"
 
 const StyledButton = styled.button<Props.Button>`
   all: unset;

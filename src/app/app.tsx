@@ -1,15 +1,3 @@
-// import Summary from "./components/Summary"
-// import StyledButton from "./components/OptionSelect"
-// import { updateSelection } from "./redux/actions"
-// import {
-//   selectChosenOptions,
-//   selectOptions,
-//   selectProduct,
-//   selectAttributes,
-// } from "./redux/selectors"
-// import { useDispatch } from "./redux/hooks"
-// import { useCallback, ReactNode, ReactElement } from "react"
-// import { Children, cloneElement } from "react"
 import {
   OptionSelect,
   Title,

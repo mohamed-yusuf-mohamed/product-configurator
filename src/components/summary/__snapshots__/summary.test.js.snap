@@ -2,7 +2,7 @@
 
 exports[`summary component renders 1`] = `
 <div
-  class="sc-bcXHqe iPrJEm sc-bcXHqe iPrJEm"
+  class="sc-bcXHqe iZSvca sc-bcXHqe iPrJEm"
   data-testid="product-summary"
 >
   <table>

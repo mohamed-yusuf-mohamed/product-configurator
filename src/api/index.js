@@ -1,5 +1,5 @@
 import data from "./mocks/products.json"
-export const getProducts = () => new Promise((resolve, reject) => resolve(data))
+export const getProducts = () => new Promise((resolve) => resolve(data))
 
 const api = {
   getProducts

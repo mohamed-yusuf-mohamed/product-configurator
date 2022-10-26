@@ -13,13 +13,13 @@ const OptionSelect = ({ type, ...props }: Props.OptionSelect) => {
     [attributes, type, value, label, dispatch]
   )
   return (
-      <Button
-        data-testid="option-button"
-        isSelected={isSelected}
-        onClick={handleOptionSelect}
-      >
-        {label}
-      </Button>
+    <Button
+      data-testid="option-button"
+      isSelected={isSelected}
+      onClick={handleOptionSelect}
+    >
+      {label}
+    </Button>
   )
 }
 

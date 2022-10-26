@@ -1,16 +1,13 @@
 import theme from "../../theme"
 import { render} from "@testing-library/react"
 import Button from "./index"
-// import props from "./mocks/props.json"
 import {useDispatch} from "../../redux/hooks"
-// import {updateSelection} from "../../redux/actions"
 import { ThemeProvider } from "styled-components"
 
 
 jest.mock("../../redux/hooks", () => ({
   useDispatch: () => {}
 }))
-// jest.mock(updateSelection)
 
 describe("button component", () => {
   const { getByTestId } = render(
