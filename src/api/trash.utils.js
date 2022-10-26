@@ -19,7 +19,7 @@ const lorem = new LoremIpsum({
 
 const ipsum = lorem.generateParagraphs(1)
 
-export const makeProducts = (data) => {
+export const generateProducts = (data) => {
   return data.products.reduce(
     (prev, product) => ({
       ...prev,

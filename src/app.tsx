@@ -1,5 +1,5 @@
-import Summary from "./components/summary"
-import StyledButton from './components/button'
+import Summary from "./components/Summary"
+import StyledButton from './components/Button'
 import { updateSelection } from './redux/actions'
 import {
   selectChosenOptions,

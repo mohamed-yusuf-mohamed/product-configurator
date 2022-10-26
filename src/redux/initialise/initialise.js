@@ -1,7 +1,7 @@
-import {initialiseData} from "./actions"
-import {store} from "./store"
-import api from "../api"
-import {generateProducts, generateOptions} from "./initialise/generators"
+import {initialiseData} from "../actions"
+import {store} from "../store"
+import api from "../../api"
+import {generateProducts, generateOptions} from "./generators"
 const initialise = async () => {
   const data = await api.getProducts()
   const products = generateProducts(data)
@@ -13,5 +13,7 @@ const initialise = async () => {
     options,
     selected: defaultSelection
   }))
+  
+  return store
 }
 export default initialise

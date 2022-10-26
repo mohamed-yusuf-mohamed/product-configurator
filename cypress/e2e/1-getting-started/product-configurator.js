@@ -4,9 +4,9 @@ When("I visit the product configurator page", () => {
   cy.visit("http://localhost:3000")
 })
 
-Then("I should see the default product selected", () => {
+// Then("I should see the default product selected", () => {
 
-})
+// })
 
 When("I click Sunset", () => {
 

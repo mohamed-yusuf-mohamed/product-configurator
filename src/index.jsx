@@ -8,10 +8,9 @@ import ReactDOM from "react-dom/client"
 import initialiseData from "./redux/initialise"
 import ProductConfigurator from "./app.styled"
 
-// const App = () => {
-const root = ReactDOM.createRoot(document.getElementById("root"))
-initialiseData().then(() => {
-  root.render(
+// const root = ReactDOM.createRoot(document.getElementById("root"))
+initialiseData().then((store) =>
+  ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
       <Provider store={store}>
         <ThemeProvider theme={theme}>
@@ -20,6 +19,4 @@ initialiseData().then(() => {
       </Provider>
     </React.StrictMode>
   )
-})
-// return <ProductConfigurator />
-// }
+)

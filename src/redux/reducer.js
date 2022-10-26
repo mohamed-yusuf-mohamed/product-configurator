@@ -1,4 +1,4 @@
-import { generateOptions, makeProducts } from "../api/utils"
+import { generateOptions, makeProducts } from "../api/trash.utils"
 // import data from "../data.json"
 
 // const products = makeProducts(data)

@@ -1,8 +1,4 @@
-import { parseHSL } from "./utils";
-// Colours are defined in HSL format. https://css-tricks.com/yay-for-hsla
-
 const theme = {
-  // configurator: {
   title: {
     colour: "hsl(0, 0%, 12%)",
   },
@@ -28,10 +24,10 @@ const theme = {
     table: {
       border: "1px solid hsl(0, 0%, 80%)",
       cell: {
-        padding: "1rem"
-      }
-    }
-  }
-};
+        padding: "1rem",
+      },
+    },
+  },
+}
 
-export default theme;
+export default theme
